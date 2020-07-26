@@ -9,7 +9,7 @@
 ## Running
 
 ```bash
-docker run -it demo:latest
+docker run -it mizunashi-mana/spring-actuator-demo:latest
 ```
 
 And access http://localhost:8080/actuator/prometheus

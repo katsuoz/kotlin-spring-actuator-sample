@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+    name: spring-actuator-demo
+    labels:
+        app: spring-actuator-demo
+
+spec:
+    selector:
+        app: spring-actuator-demo
+
+    ports:
+    -
+        name: web
+        port: 8080

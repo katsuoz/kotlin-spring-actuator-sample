@@ -45,9 +45,11 @@ tasks {
     }
 
     docker {
+        dependsOn(bootWar.get())
+
         val warArchiveFile = bootWar.get().archiveFile.get().getAsFile()
 
-        name = "demo"
+        name = "mizunashi-mana/spring-actuator-demo"
         setDockerfile(file("Dockerfile"))
         files(warArchiveFile)
         buildArgs(

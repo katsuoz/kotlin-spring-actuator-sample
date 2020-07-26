@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+    name: spring-actuator-demo
+
+spec:
+    replicas: 2
+
+    selector:
+        matchLabels:
+            app: spring-actuator-demo
+
+    template:
+        metadata:
+            labels:
+                app: spring-actuator-demo
+
+        spec:
+            containers:
+            -
+                name: spring-actuator-demo
+                image: mizunashi-mana/spring-actuator-demo:latest
+                imagePullPolicy: Never
+                ports:
+                -
+                    name: web
+                    containerPort: 8080
