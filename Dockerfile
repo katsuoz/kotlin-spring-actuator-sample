@@ -7,4 +7,7 @@ ADD $WAR_FILE app.war
 EXPOSE 8080
 
 ENV JAVA_OPTS=""
+
+ENV ISK_TEST=""
+
 ENTRYPOINT exec java $JAVA_OPTS -jar /app.war
